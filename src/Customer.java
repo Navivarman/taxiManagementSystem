@@ -1,13 +1,13 @@
 public class Customer {
-    private int id;
+    private int customerId;
     private  char pickPoint;
     private  char dropPoint;
-    private  int time;
+    private  int pickTime;
 
-    Customer(int id,char pickPoint,char dropPoint,char time){
-        this.id = id;
+    Customer(int customerId,char pickPoint,char dropPoint,char pickTime){
+        this.customerId = customerId;
         this.pickPoint = pickPoint;
         this.dropPoint = dropPoint;
-        this.time = time;
+        this.pickTime = pickTime;
     }
 }

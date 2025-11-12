@@ -1,13 +1,13 @@
 public class Booking {
-    private  int id;
+    private  int bookingId;
+    private char dropTime;
+    private  int amount;
     private Customer customer;
-    private char dropPoint;
-    private  int charges;
 
-    Booking(int id,Customer customer , char dropPoint,int charges){
-        this.id = id;
+    Booking(int bookingId,char dropTime,int amount,Customer customer){
+        this.bookingId= bookingId;
         this.customer = customer;
-        this.dropPoint = dropPoint;
-        this.charges = charges;
+        this.dropTime = dropTime;
+        this.amount = amount;
     }
 }
