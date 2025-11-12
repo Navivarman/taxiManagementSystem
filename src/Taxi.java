@@ -12,7 +12,7 @@ public class Taxi {
         this.id = id;
         this.cSpot = cSpot;
         this.freeTime = freeTime;
-        this.earnings = earnings,
+        this.earnings = earnings;
         this.booking = new ArrayList<>();
     }
 }
