@@ -1,10 +1,10 @@
 public class Booking {
     private  int bookingId;
-    private char dropTime;
+    private int dropTime;
     private  int amount;
     private Customer customer;
 
-    Booking(int bookingId,char dropTime,int amount,Customer customer){
+    Booking(int bookingId,int dropTime,int amount,Customer customer){
         this.bookingId= bookingId;
         this.customer = customer;
         this.dropTime = dropTime;
@@ -12,7 +12,7 @@ public class Booking {
     }
 
     public int getBookingId(){ return  bookingId;}
-    private char getDropTime(){ return dropTime;}
+    private int getDropTime(){ return dropTime;}
     private int getAmount(){ return amount;}
     private Customer getCustomer(){ return customer;}
 }

@@ -19,8 +19,20 @@ public class Taxi {
     }
 
     public  int getTaxiId(){ return taxiId;}
-    private char getCurrentSpot(){ return  currentSpot;}
-    private int getFreeTime(){ return freeTime;}
-    private int getEarnings(){ return earnings;}
-    private List<Booking> getBookings(){ return bookings;}
+    public char getCurrentSpot(){ return  currentSpot;}
+    public int getFreeTime(){ return freeTime;}
+    public  int getEarnings(){ return earnings;}
+    public  List<Booking> getBookings(){ return bookings;}
+    public  boolean isFree(char pickUpPoint,int pickUpTime){
+        int traveledTime = Math.abs(currentSpot - pickUpPoint);
+        if((traveledTime + freeTime) <= pickUpTime){
+            return true;
+        }
+        return false;
+
+    }
+
+    public  void assignBooking(Booking b){
+        bookings.add(b);
+    }
 }
