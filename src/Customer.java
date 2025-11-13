@@ -10,4 +10,9 @@ public class Customer {
         this.dropPoint = dropPoint;
         this.pickTime = pickTime;
     }
+
+    public int getCustomerId(){ return customerId;}
+    public char getPickPoint(){ return pickPoint;}
+    public char getDropPoint(){ return dropPoint;}
+    public int getPickTime(){ return  pickTime;}
 }

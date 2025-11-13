@@ -10,4 +10,9 @@ public class Booking {
         this.dropTime = dropTime;
         this.amount = amount;
     }
+
+    public int getBookingId(){ return  bookingId;}
+    private char getDropTime(){ return dropTime;}
+    private int getAmount(){ return amount;}
+    private Customer getCustomer(){ return customer;}
 }
