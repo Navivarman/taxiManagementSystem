@@ -12,7 +12,25 @@ public class Booking {
     }
 
     public int getBookingId(){ return  bookingId;}
-    private int getDropTime(){ return dropTime;}
-    private int getAmount(){ return amount;}
-    private Customer getCustomer(){ return customer;}
+    public int getDropTime(){ return dropTime;}
+    public int getAmount(){ return amount;}
+    public Customer getCustomer(){ return customer;}
+    public int getCustomerId(){
+        return this.customer.getCustomerId();
+    }
+
+    public char getPickUpPoint(){
+        return this.customer.getPickPoint();
+    }
+
+    public char getDropPoint(){
+        return this.customer.getDropPoint();
+    }
+
+    public int getPickUpTime(){
+        return this.customer.getPickTime();
+    }
+
+
+
 }

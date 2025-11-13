@@ -4,7 +4,7 @@ public class Customer {
     private  char dropPoint;
     private  int pickTime;
 
-    Customer(int customerId,char pickPoint,char dropPoint,char pickTime){
+    Customer(int customerId,char pickPoint,char dropPoint,int pickTime){
         this.customerId = customerId;
         this.pickPoint = pickPoint;
         this.dropPoint = dropPoint;

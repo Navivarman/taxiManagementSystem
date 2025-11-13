@@ -29,10 +29,21 @@ public class Taxi {
             return true;
         }
         return false;
-
     }
 
-    public  void assignBooking(Booking b){
+    public void assignBooking(Booking b){
         bookings.add(b);
+    }
+
+    public void setFreeTime(int freeTime){
+        this.freeTime = freeTime;
+    }
+
+    public void setEarnings(int earnings){
+        this.earnings = earnings;
+    }
+
+    public void setCurrentSpot(char currentSpot){
+        this.currentSpot = currentSpot;
     }
 }

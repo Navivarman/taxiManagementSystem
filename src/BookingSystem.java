@@ -7,7 +7,7 @@ public class BookingSystem {
 
     BookingSystem(int taxiCount){
         taxis = new ArrayList<>();
-        for(int i = 0; i < taxiCount; i++){
+        for(int i = 1; i < taxiCount; i++){
             taxis.add(new Taxi(i));
         }
     }
@@ -57,5 +57,28 @@ public class BookingSystem {
 
         Booking booking = new Booking(bookingId,dropTime,charges,c);
         bookingId++;
+
+        selected.assignBooking(booking);
+        selected.setFreeTime(dropTime);
+        selected.setEarnings(selected.getEarnings() + charges);
+        selected.setCurrentSpot(c.getDropPoint());
+
+        System.out.println("Taxi-"+selected.getTaxiId()+" is allocated");
+    }
+
+    void displayTaxi(){
+        System.out.println();
+        System.out.println();
+        for(Taxi t: taxis){
+            System.out.println("Taxi-"+t.getTaxiId()+ " Earnings: "+t.getEarnings());
+            System.out.println("Booking Id	Customer Id	From	To	Pickup Time	Drop Time	Charges");
+            for(Booking b: t.getBookings()){
+                System.out.println(b.getBookingId()+"		"+b.getCustomerId()
+                        +"		"+b.getPickUpPoint()+"		"+b.getDropPoint()
+                        +"		"+b.getPickUpTime()+"		"+b.getDropTime()+"		"
+                        +b.getAmount());
+            }
+            System.out.println();
+        }
     }
 }
